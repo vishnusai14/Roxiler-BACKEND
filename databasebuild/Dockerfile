@@ -1,6 +1,10 @@
 FROM mongo:latest
-ENV MONGO_INITDB_ROOT_INITDB=mydatabase
-ENV MONGO_INITDB_ROOT_PASSWORD=example
-ENV MONGO_INITDB_ROOT_USERNAME=root
+#Change all the env variables 
+ENV DB_NAME=value
+ENV MONGO_INITDB_ROOT_PASSWORD=value
+ENV MONGO_INITDB_ROOT_USERNAME=value
+ENV DB_USER=value
+ENV DB_PASS=value
+############################
 COPY init-mongo.js /docker-entrypoint-initdb.d/init-mongo.js
 EXPOSE 27017

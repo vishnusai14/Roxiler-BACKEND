@@ -2,28 +2,31 @@ version: '3.8'
 
 services:
 
-  web:
-    build:
-      context: .
-    ports:
-      - "1331:1331"
-    environment:
-      DB_USER: root
-      DB_PASS: example
-      DB_HOST: mongo
-      MONGO_INITDB_DATABASE     : stat
+  # web:
+  #   build:
+  #     context: .
+  #   ports:
+  #     - "1331:1331"
+  #   environment:
+  #     DB_USER: ######
+  #     DB_PASS: ######
+  #     DB_HOST: ######
+  #     DB_NAME: ######
 
   mongo:
     build:
-      context: /databasebuild/
+      context: databasebuild/
     restart: always
     ports:
       - "27017:27017"
     environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: example
-      MONGO_INITDB_DATABASE     : stat
-      DB_HOST                   : mongo
+      DB_USER: vishnu
+      DB_PASS: SaiVishnu
+      DB_NAME: stat
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin456
+
+    
 
 #  mongo-express:
 #depends_on:

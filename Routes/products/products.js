@@ -1,6 +1,6 @@
 const Router = require("express").Router();
 const productModel = require("../../Database/db").productModel;
-const axios = require("axios");
+const data = require("../data/data");
 const {
   getDataBasedOnMonthAndSearch,
   getStatiticsData,
@@ -10,44 +10,38 @@ const {
 
 // API to initialize the database.
 
-Router.get("/seed", (req, res) => {
-  axios
-    .get("https://s3.amazonaws.com/roxiler.com/product_transaction.json")
-    .then((response) => {
-      console.log(response);
-      let data = response.data;
-      let dataModel = data.map((i) => {
-        return new productModel({
-          id: i["id"],
-          title: i["title"],
-          price: i["price"],
-          description: i["description"],
-          category: i["category"],
-          image: i["image"],
-          sold: i["sold"],
-          dateOfSale: new Date(i["dateOfSale"]),
-        });
-      });
-      dataModel
-        .forEach(async (item) => {
-          try {
-            await item.save();
-            res.json({ text: "Data Added" });
-          } catch (err) {
-            console.log(err);
-            res.status(400).send({ error: err });
-            res.end();
-          }
-        })
-        .catch((err) => {
-          res.status(400).send({ error: err });
-          res.end();
-        });
+Router.post("/seed", (req, res) => {
+  console.log("Getting Seed")
+  console.log("This is the data");
+  console.log(data);
+  let dataModel = data.map((i) => {
+    return new productModel({
+      id: i["id"],
+      title: i["title"],
+      price: i["price"],
+      description: i["description"],
+      category: i["category"],
+      image: i["image"],
+      sold: i["sold"],
+      dateOfSale: new Date(i["dateOfSale"]),
     });
+  });
+  dataModel
+    .forEach(async (item) => {
+      try {
+        await item.save();
+        res.json({ text: "Data Added" });
+      } catch (err) {
+        console.log(err);
+        res.status(400).send({ error: err });
+        res.end();
+      }
+    })
 });
 
 // API to list the all transactions
 Router.get("/get-data", (req, res) => {
+  console.log("Getting All Data")
   let { page, limit, month, searchTerm } = req.query;
   console.log(req.query);
 
@@ -77,6 +71,7 @@ Router.get("/get-data", (req, res) => {
 
 // API for statistics
 Router.get("/get-statistics", (req, res) => {
+  console.log("Getting Statistics")
   let { month } = req.query;
 
   let returnData = getStatiticsData(month, productModel);
@@ -94,6 +89,7 @@ Router.get("/get-statistics", (req, res) => {
 // API for Bar Graph
 
 Router.get("/get-barchart", (req, res) => {
+  console.log("Get Barchart")
   let { month } = req.query;
 
   let returnData = getBarChartData(month, productModel);

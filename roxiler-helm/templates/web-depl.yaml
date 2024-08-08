@@ -42,8 +42,4 @@ spec:
             initialDelaySeconds: 10
             periodSeconds: 5
             failureThreshold: 3
-      initContainers:
-        - name: init-container
-          image: busybox
-          command: ['sh', '-c', 'until nslookup mongo; do echo waiting for roxiler-db-service; sleep 20; done;']
           

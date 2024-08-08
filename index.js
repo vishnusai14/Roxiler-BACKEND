@@ -16,7 +16,12 @@ app.use(express.json({ limit: "50mb" }));
 const pass = process.env.DB_PASS;
 const user = process.env.DB_USER;
 const host = process.env.DB_HOST;
-const db_name = process.env.MONGO_INITDB_DATABASE
+const db_name = process.env.DB_NAME;
+
+console.log(pass);
+console.log(user);
+console.log(host);
+console.log(db_name);
 const monogDbUri = `mongodb://${user}:${pass}@${host}:27017/${db_name}`;
 
 db.connect(monogDbUri);
