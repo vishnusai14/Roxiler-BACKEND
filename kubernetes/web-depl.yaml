@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-deployment
+  labels:
+    project: roxiler
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web-deployment-pod
+  template:
+    metadata:
+      name: web-deployment-pod
+      labels:
+        app: web-deployment-pod
+    spec:
+      containers:
+        - name: web-container
+          image: vishnuprasanna/roxiler-web:0.0.1
+          ports:
+            - name: web-port
+              containerPort: 1331
+          envFrom:
+            - secretRef:
+                name: roxiler-secret
+          resources:
+            limits:
+              memory: "512Mi"
+              cpu: "126m"
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 1331
+            initialDelaySeconds: 10
+            periodSeconds: 5
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 1331
+            initialDelaySeconds: 10
+            periodSeconds: 5
+            failureThreshold: 3
+          
