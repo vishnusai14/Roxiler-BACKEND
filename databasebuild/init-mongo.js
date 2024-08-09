@@ -20,7 +20,7 @@ db.createUser({
 });
 
 // // Insert initial data
-db.product.insertMany([
+db.products.insertMany([
   {
     id: 1,
     title: "Fjallraven  Foldsack No 1 Backpack Fits 15 Laptops",
@@ -30,7 +30,7 @@ db.product.insertMany([
     category: "men's clothing",
     image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
     sold: false,
-    dateOfSale: "2021-11-27T20:29:54+05:30",
+    dateOfSale: new Date("2021-11-27T20:29:54+05:30"),
   },
   {
     id: 2,
@@ -42,7 +42,7 @@ db.product.insertMany([
     image:
       "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
     sold: false,
-    dateOfSale: "2021-10-27T20:29:54+05:30",
+    dateOfSale: new Date("2021-10-27T20:29:54+05:30"),
   },
   {
     id: 3,
@@ -53,7 +53,7 @@ db.product.insertMany([
     category: "men's clothing",
     image: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
     sold: true,
-    dateOfSale: "2022-07-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-07-27T20:29:54+05:30"),
   },
   {
     id: 4,
@@ -64,7 +64,7 @@ db.product.insertMany([
     category: "men's clothing",
     image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
     sold: false,
-    dateOfSale: "2021-10-27T20:29:54+05:30",
+    dateOfSale: new Date("2021-10-27T20:29:54+05:30"),
   },
   {
     id: 5,
@@ -76,7 +76,7 @@ db.product.insertMany([
     category: "jewelery",
     image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
     sold: false,
-    dateOfSale: "2022-06-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-06-27T20:29:54+05:30"),
   },
   {
     id: 6,
@@ -87,7 +87,7 @@ db.product.insertMany([
     category: "jewelery",
     image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
     sold: true,
-    dateOfSale: "2021-09-27T20:29:54+05:30",
+    dateOfSale: new Date("2021-09-27T20:29:54+05:30"),
   },
   {
     id: 7,
@@ -98,7 +98,7 @@ db.product.insertMany([
     category: "jewelery",
     image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
     sold: true,
-    dateOfSale: "2022-06-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-06-27T20:29:54+05:30"),
   },
   {
     id: 8,
@@ -109,7 +109,7 @@ db.product.insertMany([
     category: "jewelery",
     image: "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
     sold: false,
-    dateOfSale: "2021-11-27T20:29:54+05:30",
+    dateOfSale: new Date("2021-11-27T20:29:54+05:30"),
   },
   {
     id: 9,
@@ -120,7 +120,7 @@ db.product.insertMany([
     category: "electronics",
     image: "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
     sold: true,
-    dateOfSale: "2022-07-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-07-27T20:29:54+05:30"),
   },
   {
     id: 10,
@@ -131,7 +131,7 @@ db.product.insertMany([
     category: "electronics",
     image: "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
     sold: false,
-    dateOfSale: "2022-03-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-03-27T20:29:54+05:30"),
   },
   {
     id: 11,
@@ -143,7 +143,7 @@ db.product.insertMany([
     category: "electronics",
     image: "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
     sold: false,
-    dateOfSale: "2021-09-27T20:29:54+05:30",
+    dateOfSale: new Date("2021-09-27T20:29:54+05:30"),
   },
   {
     id: 12,
@@ -155,7 +155,7 @@ db.product.insertMany([
     category: "electronics",
     image: "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
     sold: true,
-    dateOfSale: "2022-03-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-03-27T20:29:54+05:30"),
   },
   {
     id: 13,
@@ -166,7 +166,7 @@ db.product.insertMany([
     category: "electronics",
     image: "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
     sold: false,
-    dateOfSale: "2022-04-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-04-27T20:29:54+05:30"),
   },
   {
     id: 14,
@@ -178,7 +178,7 @@ db.product.insertMany([
     category: "electronics",
     image: "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
     sold: true,
-    dateOfSale: "2022-01-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-01-27T20:29:54+05:30"),
   },
   {
     id: 15,
@@ -189,7 +189,7 @@ db.product.insertMany([
     category: "women's clothing",
     image: "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
     sold: true,
-    dateOfSale: "2022-01-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-01-27T20:29:54+05:30"),
   },
   {
     id: 16,
@@ -201,7 +201,7 @@ db.product.insertMany([
     category: "women's clothing",
     image: "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
     sold: false,
-    dateOfSale: "2021-10-27T20:29:54+05:30",
+    dateOfSale: new Date("2021-10-27T20:29:54+05:30"),
   },
   {
     id: 17,
@@ -212,7 +212,7 @@ db.product.insertMany([
     category: "women's clothing",
     image: "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
     sold: false,
-    dateOfSale: "2022-05-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-05-27T20:29:54+05:30"),
   },
   {
     id: 18,
@@ -223,7 +223,7 @@ db.product.insertMany([
     category: "women's clothing",
     image: "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
     sold: true,
-    dateOfSale: "2021-11-27T20:29:54+05:30",
+    dateOfSale: new Date("2021-11-27T20:29:54+05:30"),
   },
   {
     id: 19,
@@ -234,7 +234,7 @@ db.product.insertMany([
     category: "women's clothing",
     image: "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
     sold: false,
-    dateOfSale: "2022-01-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-01-27T20:29:54+05:30"),
   },
   {
     id: 20,
@@ -245,7 +245,7 @@ db.product.insertMany([
     category: "women's clothing",
     image: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
     sold: false,
-    dateOfSale: "2022-02-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-02-27T20:29:54+05:30"),
   },
   {
     id: 21,
@@ -256,7 +256,7 @@ db.product.insertMany([
     category: "men's clothing",
     image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
     sold: true,
-    dateOfSale: "2021-12-27T20:29:54+05:30",
+    dateOfSale: new Date("2021-12-27T20:29:54+05:30"),
   },
   {
     id: 22,
@@ -268,7 +268,7 @@ db.product.insertMany([
     image:
       "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
     sold: false,
-    dateOfSale: "2022-01-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-01-27T20:29:54+05:30"),
   },
   {
     id: 23,
@@ -279,7 +279,7 @@ db.product.insertMany([
     category: "men's clothing",
     image: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
     sold: false,
-    dateOfSale: "2022-06-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-06-27T20:29:54+05:30"),
   },
   {
     id: 24,
@@ -290,7 +290,7 @@ db.product.insertMany([
     category: "men's clothing",
     image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
     sold: true,
-    dateOfSale: "2021-10-27T20:29:54+05:30",
+    dateOfSale: new Date("2021-10-27T20:29:54+05:30"),
   },
   {
     id: 25,
@@ -302,7 +302,7 @@ db.product.insertMany([
     category: "jewelery",
     image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
     sold: false,
-    dateOfSale: "2021-09-27T20:29:54+05:30",
+    dateOfSale: new Date("2021-09-27T20:29:54+05:30"),
   },
   {
     id: 26,
@@ -313,7 +313,7 @@ db.product.insertMany([
     category: "jewelery",
     image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
     sold: false,
-    dateOfSale: "2021-11-27T20:29:54+05:30",
+    dateOfSale: new Date("2021-11-27T20:29:54+05:30"),
   },
   {
     id: 27,
@@ -324,7 +324,7 @@ db.product.insertMany([
     category: "jewelery",
     image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
     sold: true,
-    dateOfSale: "2022-04-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-04-27T20:29:54+05:30"),
   },
   {
     id: 28,
@@ -335,7 +335,7 @@ db.product.insertMany([
     category: "jewelery",
     image: "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
     sold: true,
-    dateOfSale: "2022-08-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-08-27T20:29:54+05:30"),
   },
   {
     id: 29,
@@ -346,7 +346,7 @@ db.product.insertMany([
     category: "electronics",
     image: "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
     sold: false,
-    dateOfSale: "2022-06-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-06-27T20:29:54+05:30"),
   },
   {
     id: 30,
@@ -357,7 +357,7 @@ db.product.insertMany([
     category: "electronics",
     image: "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
     sold: true,
-    dateOfSale: "2021-10-27T20:29:54+05:30",
+    dateOfSale: new Date("2021-10-27T20:29:54+05:30"),
   },
   {
     id: 31,
@@ -369,7 +369,7 @@ db.product.insertMany([
     category: "electronics",
     image: "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
     sold: false,
-    dateOfSale: "2022-01-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-01-27T20:29:54+05:30"),
   },
   {
     id: 32,
@@ -381,7 +381,7 @@ db.product.insertMany([
     category: "electronics",
     image: "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
     sold: false,
-    dateOfSale: "2022-05-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-05-27T20:29:54+05:30"),
   },
   {
     id: 33,
@@ -392,7 +392,7 @@ db.product.insertMany([
     category: "electronics",
     image: "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
     sold: true,
-    dateOfSale: "2021-10-27T20:29:54+05:30",
+    dateOfSale: new Date("2021-10-27T20:29:54+05:30"),
   },
   {
     id: 34,
@@ -404,7 +404,7 @@ db.product.insertMany([
     category: "electronics",
     image: "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
     sold: false,
-    dateOfSale: "2021-09-27T20:29:54+05:30",
+    dateOfSale: new Date("2021-09-27T20:29:54+05:30"),
   },
   {
     id: 35,
@@ -415,7 +415,7 @@ db.product.insertMany([
     category: "women's clothing",
     image: "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
     sold: true,
-    dateOfSale: "2022-06-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-06-27T20:29:54+05:30"),
   },
   {
     id: 36,
@@ -427,7 +427,7 @@ db.product.insertMany([
     category: "women's clothing",
     image: "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
     sold: true,
-    dateOfSale: "2022-05-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-05-27T20:29:54+05:30"),
   },
   {
     id: 37,
@@ -438,7 +438,7 @@ db.product.insertMany([
     category: "women's clothing",
     image: "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
     sold: false,
-    dateOfSale: "2022-03-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-03-27T20:29:54+05:30"),
   },
   {
     id: 38,
@@ -449,7 +449,7 @@ db.product.insertMany([
     category: "women's clothing",
     image: "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
     sold: false,
-    dateOfSale: "2021-11-27T20:29:54+05:30",
+    dateOfSale: new Date("2021-11-27T20:29:54+05:30"),
   },
   {
     id: 39,
@@ -460,7 +460,7 @@ db.product.insertMany([
     category: "women's clothing",
     image: "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
     sold: true,
-    dateOfSale: "2022-06-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-06-27T20:29:54+05:30"),
   },
   {
     id: 40,
@@ -471,7 +471,7 @@ db.product.insertMany([
     category: "women's clothing",
     image: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
     sold: false,
-    dateOfSale: "2022-06-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-06-27T20:29:54+05:30"),
   },
   {
     id: 41,
@@ -482,7 +482,7 @@ db.product.insertMany([
     category: "men's clothing",
     image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
     sold: false,
-    dateOfSale: "2022-01-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-01-27T20:29:54+05:30"),
   },
   {
     id: 42,
@@ -494,7 +494,7 @@ db.product.insertMany([
     image:
       "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
     sold: true,
-    dateOfSale: "2021-12-27T20:29:54+05:30",
+    dateOfSale: new Date("2021-12-27T20:29:54+05:30"),
   },
   {
     id: 43,
@@ -505,7 +505,7 @@ db.product.insertMany([
     category: "men's clothing",
     image: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
     sold: false,
-    dateOfSale: "2022-05-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-05-27T20:29:54+05:30"),
   },
   {
     id: 44,
@@ -516,7 +516,7 @@ db.product.insertMany([
     category: "men's clothing",
     image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
     sold: false,
-    dateOfSale: "2021-12-27T20:29:54+05:30",
+    dateOfSale: new Date("2021-12-27T20:29:54+05:30"),
   },
   {
     id: 45,
@@ -528,7 +528,7 @@ db.product.insertMany([
     category: "jewelery",
     image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
     sold: true,
-    dateOfSale: "2022-06-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-06-27T20:29:54+05:30"),
   },
   {
     id: 46,
@@ -539,7 +539,7 @@ db.product.insertMany([
     category: "jewelery",
     image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
     sold: false,
-    dateOfSale: "2022-05-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-05-27T20:29:54+05:30"),
   },
   {
     id: 47,
@@ -550,7 +550,7 @@ db.product.insertMany([
     category: "jewelery",
     image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
     sold: false,
-    dateOfSale: "2022-07-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-07-27T20:29:54+05:30"),
   },
   {
     id: 48,
@@ -561,7 +561,7 @@ db.product.insertMany([
     category: "jewelery",
     image: "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
     sold: true,
-    dateOfSale: "2022-04-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-04-27T20:29:54+05:30"),
   },
   {
     id: 49,
@@ -572,7 +572,7 @@ db.product.insertMany([
     category: "electronics",
     image: "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
     sold: true,
-    dateOfSale: "2022-08-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-08-27T20:29:54+05:30"),
   },
   {
     id: 50,
@@ -583,7 +583,7 @@ db.product.insertMany([
     category: "electronics",
     image: "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
     sold: false,
-    dateOfSale: "2022-06-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-06-27T20:29:54+05:30"),
   },
   {
     id: 51,
@@ -595,7 +595,7 @@ db.product.insertMany([
     category: "electronics",
     image: "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
     sold: true,
-    dateOfSale: "2022-05-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-05-27T20:29:54+05:30"),
   },
   {
     id: 52,
@@ -607,7 +607,7 @@ db.product.insertMany([
     category: "electronics",
     image: "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
     sold: false,
-    dateOfSale: "2022-07-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-07-27T20:29:54+05:30"),
   },
   {
     id: 53,
@@ -618,7 +618,7 @@ db.product.insertMany([
     category: "electronics",
     image: "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
     sold: false,
-    dateOfSale: "2022-07-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-07-27T20:29:54+05:30"),
   },
   {
     id: 54,
@@ -630,7 +630,7 @@ db.product.insertMany([
     category: "electronics",
     image: "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
     sold: true,
-    dateOfSale: "2021-09-27T20:29:54+05:30",
+    dateOfSale: new Date("2021-09-27T20:29:54+05:30"),
   },
   {
     id: 55,
@@ -641,7 +641,7 @@ db.product.insertMany([
     category: "women's clothing",
     image: "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
     sold: false,
-    dateOfSale: "2022-07-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-07-27T20:29:54+05:30"),
   },
   {
     id: 56,
@@ -653,7 +653,7 @@ db.product.insertMany([
     category: "women's clothing",
     image: "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
     sold: true,
-    dateOfSale: "2022-02-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-02-27T20:29:54+05:30"),
   },
   {
     id: 57,
@@ -664,7 +664,7 @@ db.product.insertMany([
     category: "women's clothing",
     image: "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
     sold: true,
-    dateOfSale: "2021-09-27T20:29:54+05:30",
+    dateOfSale: new Date("2021-09-27T20:29:54+05:30"),
   },
   {
     id: 58,
@@ -675,7 +675,7 @@ db.product.insertMany([
     category: "women's clothing",
     image: "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
     sold: false,
-    dateOfSale: "2022-02-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-02-27T20:29:54+05:30"),
   },
   {
     id: 59,
@@ -686,7 +686,7 @@ db.product.insertMany([
     category: "women's clothing",
     image: "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
     sold: false,
-    dateOfSale: "2022-06-27T20:29:54+05:30",
+    dateOfSale: new Date("2022-06-27T20:29:54+05:30"),
   },
   {
     id: 60,
@@ -697,7 +697,7 @@ db.product.insertMany([
     category: "women's clothing",
     image: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
     sold: true,
-    dateOfSale: "2021-09-27T20:29:54+05:30",
+    dateOfSale: new Date("2021-09-27T20:29:54+05:30"),
   },
 ]);
 

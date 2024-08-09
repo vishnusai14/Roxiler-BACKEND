@@ -15,6 +15,7 @@ spec:
       labels:
         app: web-deployment-pod
     spec:
+      
       containers:
         - name: web-container
           image: vishnuprasanna/roxiler-web:0.0.1
@@ -42,4 +43,8 @@ spec:
             initialDelaySeconds: 10
             periodSeconds: 5
             failureThreshold: 3
+      initContainers:
+        - name: init-container
+          image: busybox
+          command: ['sh', '-c', 'until nc -z mongo 27017; do echo waiting for roxiler-db-service; sleep 2; done;']
           

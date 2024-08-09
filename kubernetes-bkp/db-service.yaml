@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     app:  db-deployment-pod
-  type: LoadBalancer 
+  type: ClusterIP
   ports:
   - name:  db-deployment-port
     port:  27017

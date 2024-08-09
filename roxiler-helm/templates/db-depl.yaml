@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: mongo-db-container
-          image: vishnuprasanna/roxiler-mongo:0.0.1
+          image: vishnuprasanna/roxiler-mongo:0.0.4.BETA
           ports:
             - name: db-port
               containerPort: 27017
