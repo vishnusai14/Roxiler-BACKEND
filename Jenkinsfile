@@ -7,7 +7,7 @@ pipeline{
                 sh 'rm -rf client'
             }
         }
-        stage("Pulling FrontEnd") {
+        stage("Cloning FrontEnd") {
             steps {
                 git credentialsId: 'git', url: 'git@github.com:vishnusai14/Roxiler-FRONTEND.git'
             }
