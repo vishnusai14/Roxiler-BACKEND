@@ -1,7 +1,7 @@
 pipeline{
     agent any
     stages{
-        stage("Removing the Existing front end build"){
+        stage("Removing the Existing front-end build"){
             steps{
                 echo "Removing the existing build folder"
                 sh 'rm -rf client'
