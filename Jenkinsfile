@@ -9,7 +9,8 @@ pipeline{
         }
         stage("Pulling FrontEnd") {
             steps {
-                sh 'mkdir -p frontend && cd frontend && git clone git@github.com:vishnusai14/Roxiler-FRONTEND.git && npm install && npm run build'
+                git credentialsId: 'git', url: 'git@github.com:vishnusai14/Roxiler-FRONTEND.git'
+                sh 'cd Roxiler-FRONTEND && npm install && npm run build'
             }
         }
     }
