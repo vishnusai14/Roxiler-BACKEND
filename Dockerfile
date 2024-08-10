@@ -4,7 +4,7 @@ WORKDIR /app
 ENV DB_USER=value 
 ENV DB_PASS=value
 ENV DB_NAME=value
-ENV DB_HOST=value
+ENV DB_HOST=****
 ##########################
 COPY package.json /app
 COPY package-lock.json /app
