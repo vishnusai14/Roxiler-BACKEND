@@ -9,7 +9,7 @@ pipeline{
         }
         stage("Cloning FrontEnd") {
             steps {
-                git@github.com:vishnusai14/Roxiler-BACKEND.git
+                git credentialsId: 'git-ssh', url: 'git@github.com:vishnusai14/Roxiler-FRONTEND.git'
             }
         }
     }
