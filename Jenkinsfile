@@ -9,7 +9,7 @@ pipeline{
         }
         stage("Cloning FrontEnd") {
             steps {
-                sh 'git clone git@github.com:vishnusai14/Roxiler-FRONTEND.git && cd Roxiler-FRONTEND && npm install && npm run build'
+                git@github.com:vishnusai14/Roxiler-BACKEND.git
             }
         }
     }
