@@ -12,7 +12,8 @@ pipeline{
         }
         stage("Cloning FrontEnd Repo") {
             steps {
-                sh 'git clone git@github.com:vishnusai14/Roxiler-FRONTEND.git'
+                git credentialsId: 'git-ssh', url: 'git@github.com:vishnusai14/Roxiler-FRONTEND.git'
+                sh "npm install && npm run build"
             }
         }
     }

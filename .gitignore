@@ -4,5 +4,6 @@ node_modules/
 FrontEnd
 FrontEnd/
 kubernetes/secrets.yaml
+kubernetes-bkp/secrets.yaml
 .idea
 roxiler-helm/templates/secrets.yaml

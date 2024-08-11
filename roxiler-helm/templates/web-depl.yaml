@@ -18,7 +18,7 @@ spec:
       
       containers:
         - name: web-container
-          image: vishnuprasanna/roxiler-web:0.0.1
+          image: vishnuprasanna/roxiler-web:latest
           ports:
             - name: web-port
               containerPort: 1331
