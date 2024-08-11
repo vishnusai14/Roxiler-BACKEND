@@ -34,6 +34,7 @@ pipeline{
         
         stage("Copying the build from the frontend folder") {
             steps {
+                sh "mkdir -p backend/client/build"
                 sh 'cp -r frontend/build backend/client/build/'
             }
         }
