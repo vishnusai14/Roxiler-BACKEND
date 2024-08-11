@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    tools{
+        node "NODEJS"
+    }
     stages{
         stage("Removing the Existing front-end build"){
             steps{
@@ -9,7 +12,7 @@ pipeline{
         }
         stage("Cloning FrontEnd Repo") {
             steps {
-                git credentialsId: 'git-ssh', url: 'git@github.com:vishnusai14/Roxiler-FRONTEND.git'
+                sh 'git clone git@github.com:vishnusai14/Roxiler-FRONTEND.git'
             }
         }
     }
