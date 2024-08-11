@@ -34,7 +34,7 @@ pipeline{
         
         stage("Copying the build from the frontend folder") {
             steps {
-                sh 'cp -r frontend/build backend/client/'
+                sh 'cp -r frontend/build backend/client/build/'
             }
         }
         
@@ -45,7 +45,7 @@ pipeline{
                 dir('backend') {
                     script {
                         docker.withRegistry('https://index.docker.io/v1/', "${dockerCred}") { 
-                            def customImage = docker.build("vishnuprasanna/roxiler-mongo:latest","-f databasebuild/Dockerfile databasebuild")        
+                            def customImage = docker.build("vishnuprasanna/roxiler-mongo:${env.BUILD_NUMBER}","-f databasebuild/Dockerfile databasebuild")        
                         }
                     
                     }    
@@ -57,7 +57,7 @@ pipeline{
             steps {
                 script {
                     docker.withRegistry('https://index.docker.io/v1/', "${dockerCred}") {
-                        docker.image("vishnuprasanna/roxiler-mongo:latest").push()
+                        docker.image("vishnuprasanna/roxiler-mongo:${env.BUILD_NUMBER}").push()
                     }
            
                 }
@@ -72,7 +72,7 @@ pipeline{
                 dir('backend') {
                     script {
                         docker.withRegistry('https://index.docker.io/v1/', "${dockerCred}") {
-                            def customImage = docker.build("vishnuprasanna/roxiler-web:latest")        
+                            def customImage = docker.build("vishnuprasanna/roxiler-web:${env.BUILD_NUMBER}")        
                         }
                     
                     }    
@@ -84,7 +84,7 @@ pipeline{
             steps {
                 script {
                     docker.withRegistry('https://index.docker.io/v1/', "${dockerCred}") {
-                        docker.image("vishnuprasanna/roxiler-web:latest").push()
+                        docker.image("vishnuprasanna/roxiler-web:${env.BUILD_NUMBER}").push()
                     }
            
                 }
@@ -108,7 +108,7 @@ pipeline{
         stage("Installing/Upgrading stack using helm") {
             steps {
                 dir("backend") {
-                    sh "helm upgrade --install roxiler-stack roxiler-helm/ --namespace=dev"                        
+                    sh "helm upgrade --install roxiler-stack roxiler-helm/ --namespace=dev --set image.tag=${env.BUILD_NUMBER}"                        
                 }
                 
             }

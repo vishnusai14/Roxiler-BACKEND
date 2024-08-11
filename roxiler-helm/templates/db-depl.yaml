@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: mongo-db-container
-          image: vishnuprasanna/roxiler-mongo:latest
+          image: vishnuprasanna/roxiler-mongo:{{ .Values.image.tag }}
           ports:
             - name: db-port
               containerPort: 27017
