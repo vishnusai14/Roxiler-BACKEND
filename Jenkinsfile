@@ -1,7 +1,7 @@
 pipeline{
     agent any
     tools{
-        node "NODEJS"
+        nodejs "NODEJS"
     }
     stages{
         stage("Removing the Existing front-end build"){
